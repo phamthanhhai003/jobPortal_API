@@ -1,6 +1,10 @@
 {
+    "version": 2,
     "functions": {
-      "root.py": { "maxDuration": 100 }
-    }
+      "api/index.py": { "maxDuration": 30 }
+    },
+    "routes": [
+      { "src": "/(.*)", "dest": "/api/index.py" }
+    ]
   }
   
