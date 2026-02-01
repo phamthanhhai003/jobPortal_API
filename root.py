@@ -11,10 +11,11 @@ app = FastAPI(default_response_class=ORJSONResponse)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 BASE_DIR = Path(__file__).resolve().parent
 COMPANY_CSV = BASE_DIR / "source" / "company.csv"
